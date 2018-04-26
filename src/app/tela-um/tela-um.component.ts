@@ -24,4 +24,9 @@ export class TelaUmComponent implements OnInit {
       element.disabled = true;
     }    
   }
+
+  limparbox(){
+    var element = <HTMLInputElement> document.getElementById("aceitou");
+    element.checked = false;
+  }
 }
