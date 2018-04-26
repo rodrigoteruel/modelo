@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.spacesimple{
+    margin-top: 16px;
+}
+.spacedouble{
+    margin-top: 32px;
+}
+.stringcollor{
+    color: #8c17e7;
+}
+
+.textobotao{
+    font-weight: bolder;
+    color: white;
+}
+
+.textobotao:disabled{
+    font-weight: bolder;
+    color: white;
+}
+.centro{
+    TEXT-ALIGN: CENTER;
+}
+.espacoclose{
+    padding-right: 5px; 
+    padding-top: 5px;
+}

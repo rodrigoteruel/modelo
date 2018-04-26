@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TelaUmComponent } from './tela-um/tela-um.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TelaUmComponent
   ],
   imports: [
     BrowserModule
