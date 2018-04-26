@@ -18,6 +18,10 @@
     font-weight: bolder;
     color: white;
 }
+.textobotao:hover{
+    font-weight: bolder;
+    color: white;
+}
 .centro{
     TEXT-ALIGN: CENTER;
 }
