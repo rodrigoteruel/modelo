@@ -25,7 +25,37 @@
 .centro{
     TEXT-ALIGN: CENTER;
 }
+.direita{
+    TEXT-ALIGN: right;
+}
 .espacoclose{
     padding-right: 5px; 
     padding-top: 5px;
+}
+.espacodrop{
+    margin: 10px;
+}
+
+.dropbotao{
+    font-weight: bolder;
+    color: white;
+    background-color: #8c17e7;
+    border-color: #8c17e7;
+}
+
+.dropbotao:disabled{
+    font-weight: bolder;
+    color: white;
+    background-color: #8c17e7;
+    border-color: #8c17e7;
+}
+.dropbotao:hover{
+    font-weight: bolder;
+    color: white;
+    background-color: #8c17e7; 
+    border-color: #8c17e7;
+}
+
+.custom-control-label{
+    color: #8c17e7;
 }

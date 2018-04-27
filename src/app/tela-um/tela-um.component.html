@@ -1,24 +1,36 @@
-<div class="text-center">
-  <img class="img-responsive center-block" src="assets\images\checklist.png">
-</div>
-<div class="text-center">
-  <h5 class="stringcollor">INFORMAÇÕES RECEBIDAS!</h5>
-</div>
-<div class="text-center spacesimple">
-  <label>Em até 48h daremos um retorno sobre a abertura de sua conta.</label>
-</div>
-<div class="text-center spacesimple">
-  <label>Para receber nossas recomentações de investimento e começar a investir, precisamos conhecer seu perfil de investidor.</label>
-</div>
-<div class="text-center spacesimple">
-  <label>São apenas 4 perguntas, que irão guiar todas as suas decisões de investimentos.</label>
-</div>
-<div class="text-center spacedouble">
-  <label>Gostaria de responder ao Perfil do investidor?</label>
-</div>
-<div class="text-center">
-  <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">Não</button>
-  <button type="button" class="btn btn-outline-success" [routerLink]="['/tres']">Sim</button>
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacedouble">
+      <img class="img-responsive center-block" src="assets\images\checklist.png">
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacesimples">
+      <h4 class="stringcollor">INFORMAÇÕES RECEBIDAS!</h4>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacedouble">
+      <label>Em até 48h daremos um retorno sobre a abertura de sua conta.</label>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacesimple">
+      <label>Para receber nossas recomentações de investimento e começar a investir, precisamos conhecer seu perfil de investidor.</label>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacesimple">
+      <label>São apenas 4 perguntas, que irão guiar todas as suas decisões de investimentos.</label>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacedouble">
+      <label>Gostaria de responder ao Perfil do investidor?</label>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacesimple">
+      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">Não</button>
+      <button type="button" class="btn btn-outline-success" [routerLink]="['/tres']">Sim</button>
+    </div>
+
+  </div>
 </div>
 
 <!-- The Modal -->
@@ -36,11 +48,10 @@
         <div class="text-center">
           <h5 class="stringcollor">TERMO</h5>
         </div>
-
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-        text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type.
-        <P></P>
-
+        <label class="spacedouble">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type.
+        </label>
       </div>
 
       <!-- Modal footer -->
@@ -55,8 +66,9 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-12">
-              <button id="btnok"  (click)="limparbox()" disabled type="button" class="btn btn-warning textobotao  btn-lg btn-block" data-dismiss="modal" [routerLink]="['/quatro']">OK, ENTENDI</button>
+            <div class="col-md-12 spacesimple">
+              <button id="btnok" (click)="limparbox()" disabled type="button" class="btn btn-warning textobotao  btn-lg btn-block" data-dismiss="modal"
+                [routerLink]="['/quatro']">OK, ENTENDI</button>
             </div>
           </div>
         </div>

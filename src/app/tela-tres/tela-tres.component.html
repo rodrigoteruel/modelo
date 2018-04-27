@@ -1,3 +1,150 @@
-<p>
-  tela-tres works!
-</p>
+<div class="jumbotron text-center" *ngIf="submitted">
+<h2>thanks for submit</h2>
+</div>
+
+<form  (ngSubmit)="create()" *ngIf="!submitted"> 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 centro spacedouble">
+        <h4 class="stringcollor">PERFIL DO INVESTIDOR - QUESTIONÁRIO</h4>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 centro spacesimple">
+        <h5>1 - Qual o seu comportamento em relação aos seus investimentos?</h5>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="primeiraum" name="primeira" class="custom-control-input" value="{{data[0]?.cep}}" (click)="primeira(0)"
+                (click)="primeira(0)">
+              <label class="custom-control-label" for="primeiraum">{{data[0]?.cep}}</label>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="primeiradois" name="primeira" class="custom-control-input" value="{{data[1]?.cep}}" (click)="primeira(1)">
+              <label class="custom-control-label" for="primeiradois">{{data[1]?.cep}}</label>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="primeiratres" name="primeira" class="custom-control-input" value="{{data[2]?.cep}}" (click)="primeira(2)">
+              <label class="custom-control-label" for="primeiratres">{{data[2]?.cep}}</label>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 centro spacesimple">
+        <h5>2 - Por quanto tempo você deseja manter os seus investimentos?</h5>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="segundaum" name="segunda" class="custom-control-input" value="{{data[3]?.cep}}" (click)="segunda(3)">
+              <label class="custom-control-label" for="segundaum">{{data[3]?.cep}}</label>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="segundadois" name="segunda" class="custom-control-input" value="{{data[4]?.cep}}" (click)="segunda(4)">
+              <label class="custom-control-label" for="segundadois">{{data[4]?.cep}}</label>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="segundatres" name="segunda" class="custom-control-input" value="{{data[5]?.cep}}" (click)="segunda(5)">
+              <label class="custom-control-label" for="segundatres">{{data[5]?.cep}}</label>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 centro spacesimple">
+        <h5>3 - Quantos % desses investimentos você pode precisar em um ano?</h5>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="terceiraum" name="terceira" class="custom-control-input" value="{{data[6]?.cep}}" (click)="terceira(6)">
+              <label class="custom-control-label" for="terceiraum">{{data[6]?.cep}}</label>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="terceiradois" name="terceira" class="custom-control-input" value="{{data[7]?.cep}}" (click)="terceira(7)">
+              <label class="custom-control-label" for="terceiradois">{{data[7]?.cep}}</label>
+            </div>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
+            <div class="custom-control custom-radio custom-control-inline spacesimple">
+              <input type="radio" id="terceiratres" name="terceira" class="custom-control-input" value="{{data[5]?.cep}}" (click)="terceira(0)">
+              <label class="custom-control-label" for="terceiratres">{{data[0]?.cep}}</label>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 centro spacesimple">
+        <h5>4 - Qual sua familiaridade com os tipos de investimentos abaixo?</h5>
+        <h5>Leve em consideração o valor aplicado nos últimos 2 anos.</h5>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="form-group">
+                <label class="stringcollor">TÍTULO DE RENDA FIXA OU TESOURO DIRETO</label>
+                <select class="form-control" id="primeiroquadro">
+                  <option value="null"></option>
+                  <option value="1" label="1 - Nunca operei"></option>
+                  <option value="2" label="2 - Opero pouco e não tenho familiares"></option>
+                  <option value="3" label="3 - Opero eventualmente e conheço os riscos associados"></option>
+                  <option value="4" label="4 - Opero frequentemente e conheço os riscos associados"></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="form-group">
+                <label class="stringcollor">FUNDOS DE INVESTIMENTOS</label>
+                <select class="form-control" id="primeiroquadro" disabled>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="form-group">
+                <label class="stringcollor">AÇÕES A VISTA</label>
+                <select class="form-control" id="primeiroquadro" disabled>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="form-group">
+                <label class="stringcollor">ALUGUEL DE AÇÕES, TERMOS, OPÇÕES E FUTUROS</label>
+                <select class="form-control" id="primeiroquadro" disabled>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                  <option></option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 direita">
+        <button class="btn btn-outline-secondary" type="reset" style="margin-top: 30px;" [routerLink]="['/']">
+          VOLTAR
+        </button>
+        <button class="btn btn-warning textobotao" type="submit" style="margin-top: 30px;">
+          SALVAR
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
