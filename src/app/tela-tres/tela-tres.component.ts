@@ -1,11 +1,8 @@
 
 import { Modelo } from './../modelo';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-
-
-
 
 @Component({
   selector: 'app-tela-tres',
@@ -15,6 +12,8 @@ import 'rxjs/add/operator/map';
 export class TelaTresComponent implements OnInit {
   modelo: Modelo = new Modelo();
   submitted: boolean = false; //check if the form is submitted
+  @Output() retornamodelo = new EventEmitter();
+  tela: number = 1;
 
   private apiUrl = 'https://viacep.com.br/ws/MG/Uberaba/barao/json/';
   data: any = {};
@@ -37,41 +36,65 @@ export class TelaTresComponent implements OnInit {
       this.data = data
     })
   }
+  
+  verifica(){
+    let valido: number = 0;
+    if (this.modelo.questionum == 0){
+      valido = valido + 1;
+    }
+    if (this.modelo.questiondois == 0){
+      valido = valido + 1;
+    }
+    if (this.modelo.questiontres == 0){
+      valido = valido + 1;
+    }
+    if (this.modelo.questionquatro == 0){
+      valido = valido + 1;
+    }
+    if (valido == 0){
+      var element = <HTMLInputElement> document.getElementById("salvar");
+      element.disabled = false;
+      this.submitted = true;
+    }else{
+      var element = <HTMLInputElement> document.getElementById("salvar");
+      element.disabled = true;
+      this.submitted = false;
+    }
+  }
  
- 
-
   create(){
     //call server to save
-    console.log("entrou no create");
-    this.submitted = true;
+    if (this.submitted == true){
+      //envia campos para a tela 4
+      this.retornamodelo.emit(this.modelo);
+      this.tela = 2;
+    }else{
+      //não envia campos para a tela 4
+    }
     
   }
 
   primeira(valor: any){
     this.modelo.questionum = this.data[valor].cep;
+    this.verifica();
   }
 
   segunda(valor: any){
     this.modelo.questiondois = this.data[valor].cep;
+    this.verifica();
   }
 
   terceira(valor: any){
     this.modelo.questiontres = this.data[valor].cep;
+    this.verifica();
   }
 
-  quarta(){
-
+  quarta(valor: any){
+    this.modelo.questionquatro = valor;
+    this.verifica();
   }
-
 
   ngOnInit() {
      
   }
-
- 
-
- 
-
- 
-
 }

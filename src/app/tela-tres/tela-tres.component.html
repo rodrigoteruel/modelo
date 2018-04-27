@@ -1,8 +1,4 @@
-<div class="jumbotron text-center" *ngIf="submitted">
-<h2>thanks for submit</h2>
-</div>
-
-<form  (ngSubmit)="create()" *ngIf="!submitted"> 
+<form  (ngSubmit)="create()" *ngIf="tela == 1"> 
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 centro spacedouble">
@@ -13,8 +9,7 @@
         <div class="row">
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 centro spacesimple">
             <div class="custom-control custom-radio custom-control-inline spacesimple">
-              <input type="radio" id="primeiraum" name="primeira" class="custom-control-input" value="{{data[0]?.cep}}" (click)="primeira(0)"
-                (click)="primeira(0)">
+              <input type="radio" id="primeiraum" name="primeira" class="custom-control-input" value="{{data[0]?.cep}}" (click)="primeira(0)">
               <label class="custom-control-label" for="primeiraum">{{data[0]?.cep}}</label>
             </div>
           </div>
@@ -89,10 +84,10 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
               <div class="form-group">
                 <label class="stringcollor">TÍTULO DE RENDA FIXA OU TESOURO DIRETO</label>
-                <select class="form-control" id="primeiroquadro">
+                <select class="form-control" id="primeiroquadro" (change)="quarta($event.target.value)">
                   <option value="null"></option>
                   <option value="1" label="1 - Nunca operei"></option>
-                  <option value="2" label="2 - Opero pouco e não tenho familiares"></option>
+                  <option value="2" label="2 - Opero pouco e não tenho familiares"  (click)="quarta()"></option>
                   <option value="3" label="3 - Opero eventualmente e conheço os riscos associados"></option>
                   <option value="4" label="4 - Opero frequentemente e conheço os riscos associados"></option>
                 </select>
@@ -141,10 +136,11 @@
         <button class="btn btn-outline-secondary" type="reset" style="margin-top: 30px;" [routerLink]="['/']">
           VOLTAR
         </button>
-        <button class="btn btn-warning textobotao" type="submit" style="margin-top: 30px;">
+        <button class="btn btn-warning textobotao" id="salvar" type="submit" style="margin-top: 30px;" disabled>
           SALVAR
         </button>
       </div>
     </div>
   </div>
 </form>
+<app-tela-quatro (pegamodelo)="retornamodelo"  *ngIf="tela == 2"></app-tela-quatro>

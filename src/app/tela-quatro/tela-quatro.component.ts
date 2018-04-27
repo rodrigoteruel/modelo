@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tela-quatro',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tela-quatro.component.css']
 })
 export class TelaQuatroComponent implements OnInit {
+  @Input() pegamodelo
 
   constructor() { }
 
