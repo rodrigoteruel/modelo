@@ -6,8 +6,11 @@ import { Modelo } from './modelo';
   templateUrl: './telas.component.html',
   styleUrls: ['./telas.component.css']
 })
+
 export class TelasComponent implements OnInit {
   modelo: Modelo;
+  alterna: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +18,6 @@ export class TelasComponent implements OnInit {
 
   processaModelo(evento){
     this.modelo = evento;
+    this.alterna = !this.alterna;
   }
-
 }

@@ -6,6 +6,7 @@ import { Modelo } from '../modelo';
   templateUrl: './tela-quatro.component.html',
   styleUrls: ['./tela-quatro.component.css']
 })
+
 export class TelaQuatroComponent implements OnInit {
   @Input() pegamodelo
 
@@ -13,5 +14,4 @@ export class TelaQuatroComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

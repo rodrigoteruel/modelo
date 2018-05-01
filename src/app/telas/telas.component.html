@@ -1,2 +1,2 @@
-<app-tela-tres (retornamodelo)="processaModelo($event)"></app-tela-tres>
-<app-tela-quatro [pegamodelo]="modelo" ></app-tela-quatro>
+<app-tela-tres (retornamodelo)="processaModelo($event)" *ngIf="alterna"></app-tela-tres>
+<app-tela-quatro [pegamodelo]="modelo" *ngIf="!alterna"></app-tela-quatro>
