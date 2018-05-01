@@ -39,16 +39,16 @@ export class TelaTresComponent implements OnInit {
   
   verifica(){
     let valido: number = 0;
-    if (this.modelo.questionum == 0){
+    if (this.modelo.questionum == ""){
       valido = valido + 1;
     }
-    if (this.modelo.questiondois == 0){
+    if (this.modelo.questiondois == ""){
       valido = valido + 1;
     }
-    if (this.modelo.questiontres == 0){
+    if (this.modelo.questiontres == ""){
       valido = valido + 1;
     }
-    if (this.modelo.questionquatro == 0){
+    if (this.modelo.questionquatro == ""){
       valido = valido + 1;
     }
     if (valido == 0){

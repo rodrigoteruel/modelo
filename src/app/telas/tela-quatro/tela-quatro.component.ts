@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Modelo } from '../modelo';
 
 @Component({
   selector: 'app-tela-quatro',

@@ -10,9 +10,10 @@ import { ROUTES } from './app.routes';
 
 
 import { AppComponent } from './app.component';
-import { TelaUmComponent } from './tela-um/tela-um.component';
-import { TelaTresComponent } from './tela-tres/tela-tres.component';
-import { TelaQuatroComponent } from './tela-quatro/tela-quatro.component';
+import { TelaUmComponent } from './telas/tela-um/tela-um.component';
+import { TelaTresComponent } from './telas/tela-tres/tela-tres.component';
+import { TelaQuatroComponent } from './telas/tela-quatro/tela-quatro.component';
+import { TelasComponent } from './telas/telas.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TelaQuatroComponent } from './tela-quatro/tela-quatro.component';
     AppComponent,
     TelaUmComponent,
     TelaTresComponent,
-    TelaQuatroComponent
+    TelaQuatroComponent,
+    TelasComponent
   ],
   imports: [
     BrowserModule,
